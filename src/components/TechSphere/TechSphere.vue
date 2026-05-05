@@ -1,6 +1,6 @@
 <template>
   <section class="tech">
-    <h2 class="tech__title">Skills</h2>
+    <h2 class="tech__title">{{ $t('tech.title') }}</h2>
     <canvas ref="canvasRef" class="tech__canvas" />
     <TechTooltip />
   </section>

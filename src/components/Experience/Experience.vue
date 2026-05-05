@@ -1,6 +1,6 @@
 <template>
   <section class="experience">
-    <h2 class="experience__title">Experience</h2>
+    <h2 class="experience__title">{{ $t('experience.title') }}</h2>
 
     <div
       v-for="item in experience"
@@ -8,12 +8,11 @@
       class="experience__item"
       @mousemove="handleMouseMove"
     >
-
       <div class="experience__header">
         <div>
           <h3>{{ item.company }}</h3>
           <p class="muted">
-            {{ item.position }} • {{ item.location }}
+            {{ item.role }} • {{ item.location }}
           </p>
         </div>
 
@@ -32,32 +31,29 @@
         <h4>{{ project.name }}</h4>
 
         <div class="tags">
-            <p>Stack:</p>
+          <p>{{ $t('experience.stack') }}:</p>
           <span v-for="tech in project.stack" :key="tech">
             {{ tech }}
           </span>
         </div>
 
         <div v-if="project.libraries" class="tags tags-libraries">
-            <p>Libraries:</p>
-          <span v-for="library in project.libraries" :key="library">
-            {{ library }}
+          <p>{{ $t('experience.libraries') }}:</p>
+          <span v-for="lib in project.libraries" :key="lib">
+            {{ lib }}
           </span>
         </div>
 
         <div v-if="project.testing" class="tags tags-tests">
-            <p>Tests:</p>
-            <span v-for="test in project.testing"  :key="test">
-                {{ test }}
-            </span>
+          <p>{{ $t('experience.tests') }}:</p>
+          <span v-for="test in project.testing" :key="test">
+            {{ test }}
+          </span>
         </div>
 
         <ul class="achievements">
-          <li
-            v-for="a in project.achievements"
-            :key="a"
-          >
-            {{ a }}
+          <li v-for="achievement in project.achievements" :key="achievement">
+            {{ achievement }}
           </li>
         </ul>
       </div>
@@ -66,7 +62,15 @@
 </template>
 
 <script setup lang="ts">
-import { experience } from '@/data/experience'
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+import type { ExperienceItem } from '@/types/experience'
+
+const { tm } = useI18n()
+
+const experience = computed<ExperienceItem[]>(() =>
+  tm('experience.items') as ExperienceItem[]
+)
 
 function handleMouseMove(e: MouseEvent) {
   const target = e.currentTarget as HTMLElement

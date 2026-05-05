@@ -24,8 +24,8 @@
           class="contact-card__copy"
           @click.stop.prevent="handleCopy"
         >
-          <span v-if="!copied">Copy</span>
-          <span v-else class="contact-card__copied">Copied!</span>
+          <span v-if="!copied">{{ $t('contacts.copy') }}</span>
+          <span v-else class="contact-card__copied">{{ $t('contacts.copied') }}</span>
         </button>
       </div>
 

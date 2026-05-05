@@ -8,13 +8,16 @@
     }"
   >
     <strong>{{ skill.name }}</strong>
-    <p>{{ skill.description }}</p>
+    <p>{{ t(`tech.${skill.id}`) }}</p>
   </div>
 </template>
 
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
+import { useI18n } from 'vue-i18n'
 import { useTechSphereStore } from '@/store/techSphere.store'
+
+const { t } = useI18n()
 
 const store = useTechSphereStore()
 const { hoveredSkill, tooltipPosition } = storeToRefs(store)

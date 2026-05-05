@@ -10,7 +10,7 @@
     id: string
     company: string
     location: string
-    position: string
+    role: string
     period: string
     summary: string
     projects: ExperienceProject[]

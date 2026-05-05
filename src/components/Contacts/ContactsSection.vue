@@ -3,11 +3,11 @@
     <div class="contacts__container">
       <div class="contacts__header">
         <h2 class="contacts__title">
-          Contacts
+          {{ $t('contacts.title') }}
         </h2>
 
         <p class="contacts__subtitle">
-          Открыта к новым проектам и интересным задачам. Буду рада обсудить сотрудничество.
+          {{ $t('contacts.description') }}
         </p>
       </div>
 

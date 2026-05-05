@@ -1,5 +1,6 @@
 <template>
   <div class="app">
+    <LanguageToggler />
     <ThemeToggler />
     <Hero />
     <About />
@@ -10,12 +11,13 @@
 </template>
 
 <script setup lang="ts">
-import ThemeToggler from './components/Theme/ThemeToggler.vue';
+import LanguageToggler from '@/components/Language/LanguageToggler.vue';
+import ThemeToggler from '@/components/Theme/ThemeToggler.vue';
 import Hero from '@/components/Hero/Hero.vue';
 import About from '@/components/About/About.vue';
 import Experience from '@/components/Experience/Experience.vue';
 import TechSphere from '@/components/TechSphere/TechSphere.vue';
-import ContactsSection from './components/Contacts/ContactsSection.vue';
+import ContactsSection from '@/components/Contacts/ContactsSection.vue';
 </script>
 
 <style scoped lang="scss">

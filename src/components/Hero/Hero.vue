@@ -1,7 +1,7 @@
 <template>
   <section class="hero">
-    <h1>Frontend Developer</h1>
-    <p>Vue 3 • TypeScript • Architecture</p>
+    <h1>{{ $t('hero.title') }}</h1>
+    <p>{{ $t('hero.subtitle') }}</p>
   </section>
 </template>
 
