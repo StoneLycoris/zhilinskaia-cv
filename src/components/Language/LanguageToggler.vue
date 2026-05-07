@@ -16,11 +16,11 @@ const { locale, toggleLocale } = useLocale()
 .lang-toggle {
   position: fixed;
   top: 20px;
-  right: 70px;
-
+  left: 10px;
+  z-index: 1;
   background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: 999px;
+  border-radius: 20px;
 
   padding: 6px 14px;
   cursor: pointer;
