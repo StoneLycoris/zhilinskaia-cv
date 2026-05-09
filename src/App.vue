@@ -2,9 +2,9 @@
   <div class="app">
     <LanguageToggler />
     <ThemeToggler />
-    <Hero />
-    <About />
-    <Experience />
+    <HeroSection />
+    <AboutSection />
+    <ExperienceSection />
     <TechSphere />
     <ContactsSection />
   </div>
@@ -13,9 +13,9 @@
 <script setup lang="ts">
 import LanguageToggler from '@/components/Language/LanguageToggler.vue';
 import ThemeToggler from '@/components/Theme/ThemeToggler.vue';
-import Hero from '@/components/Hero/Hero.vue';
-import About from '@/components/About/About.vue';
-import Experience from '@/components/Experience/Experience.vue';
+import HeroSection from '@/components/Hero/HeroSection.vue';
+import AboutSection from '@/components/About/AboutSection.vue';
+import ExperienceSection from '@/components/Experience/ExperienceSection.vue';
 import TechSphere from '@/components/TechSphere/TechSphere.vue';
 import ContactsSection from '@/components/Contacts/ContactsSection.vue';
 </script>
