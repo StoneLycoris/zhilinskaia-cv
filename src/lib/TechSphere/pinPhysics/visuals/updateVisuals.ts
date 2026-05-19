@@ -1,9 +1,9 @@
 import * as THREE from 'three'
-import type { SkillPin } from '@/types/skillPin'
 
-import { updateStick } from '@/lib/TechSphere/pinPhysics/visuals/updateStick'
 import { updateHead } from '@/lib/TechSphere/pinPhysics/visuals/updateHead'
 import { updateLabel } from '@/lib/TechSphere/pinPhysics/visuals/updateLabel'
+import { updateStick } from '@/lib/TechSphere/pinPhysics/visuals/updateStick'
+import type { SkillPin } from '@/types/skillPin'
 
 export function updateVisuals(
   pin: SkillPin,

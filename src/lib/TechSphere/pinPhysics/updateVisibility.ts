@@ -1,6 +1,7 @@
 import * as THREE from 'three'
-import type { SkillPin } from '@/types/skillPin'
+
 import { VISIBILITY } from '@/lib/TechSphere/pinPhysics/config'
+import type { SkillPin } from '@/types/skillPin'
 
 const tempDir = new THREE.Vector3()
 

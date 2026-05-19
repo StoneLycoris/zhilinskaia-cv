@@ -1,9 +1,11 @@
-import { createApp } from 'vue'
 import '@/assets/styles/main.scss'
+
+import { createApp } from 'vue'
+
 import App from '@/App.vue'
-import { setupPinia } from '@/store/ui.store'
 import { useTheme } from '@/composables/useTheme'
 import { i18n } from '@/i18n'
+import { setupPinia } from '@/store/ui.store'
 
 const app = createApp(App)
 

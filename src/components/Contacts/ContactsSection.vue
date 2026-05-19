@@ -24,6 +24,7 @@
 
 <script setup lang="ts">
 import { contacts } from '@/data/contacts'
+
 import ContactCard from './ContactCard.vue'
 </script>
 

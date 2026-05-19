@@ -1,6 +1,7 @@
 import * as THREE from 'three'
-import type { SkillPin } from '@/types/skillPin'
+
 import { updatePinPhysics } from '@/lib/TechSphere/pinPhysics/updatePinPhysics'
+import type { SkillPin } from '@/types/skillPin'
 
 export function createEngine(opts: {
   scene: THREE.Scene

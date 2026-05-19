@@ -1,6 +1,7 @@
 import * as THREE from 'three'
-import type { SkillPin } from '@/types/skillPin'
+
 import type { Skill } from '@/types/skill'
+import type { SkillPin } from '@/types/skillPin'
 
 export function createInteraction(opts: {
   canvas: HTMLCanvasElement

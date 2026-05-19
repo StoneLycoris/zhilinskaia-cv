@@ -1,9 +1,8 @@
-import type { Contact } from '@/types/contact'
-
-import emailIcon from '@/assets/icons/contacts/mail.svg'
 import githubIcon from '@/assets/icons/contacts/github.svg'
 import linkedinIcon from '@/assets/icons/contacts/linkedin.svg'
+import emailIcon from '@/assets/icons/contacts/mail.svg'
 import telegramIcon from '@/assets/icons/contacts/telegram.svg'
+import type { Contact } from '@/types/contact'
 
 export const contacts: Contact[] = [
   {

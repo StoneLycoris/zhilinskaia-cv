@@ -1,6 +1,7 @@
 import * as THREE from 'three'
-import type { Skill } from '@/types/skill'
+
 import { loadIcon } from '@/lib/TechSphere/utils/iconLoader'
+import type { Skill } from '@/types/skill'
 
 export function createSpriteLabel(skill: Skill): THREE.Sprite {
   const canvas = document.createElement('canvas')

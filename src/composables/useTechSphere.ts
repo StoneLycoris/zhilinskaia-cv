@@ -1,25 +1,21 @@
-import { onMounted, onUnmounted, watch } from 'vue'
 import * as THREE from 'three'
+import type { Ref } from 'vue'
+import { onMounted, onUnmounted, watch } from 'vue'
 
-import { skills } from '@/data/skills'
-import { useTechSphereStore } from '@/store/techSphere.store'
-
-import { createScene } from '@/lib/TechSphere/core/createScene'
-import { createCamera } from '@/lib/TechSphere/core/createCamera'
-import { createRenderer } from '@/lib/TechSphere/core/createRenderer'
-import { createControls } from '@/lib/TechSphere/core/createControls'
-import { createLights, setLightsTheme, type SceneLights } from '@/lib/TechSphere/core/createLights'
 import { useTheme } from '@/composables/useTheme'
-
+import { skills } from '@/data/skills'
+import { createCamera } from '@/lib/TechSphere/core/createCamera'
+import { createControls } from '@/lib/TechSphere/core/createControls'
+import { createLights, type SceneLights,setLightsTheme } from '@/lib/TechSphere/core/createLights'
+import { createRenderer } from '@/lib/TechSphere/core/createRenderer'
+import { createResizeSystem } from '@/lib/TechSphere/core/createResizeSystem'
+import { createScene } from '@/lib/TechSphere/core/createScene'
+import { createEngine } from '@/lib/TechSphere/engine/createEngine'
 import { createGlobe, setGlobeTheme } from '@/lib/TechSphere/entities/globe/createGlobe'
 import { createPins } from '@/lib/TechSphere/entities/pin/createPins'
-
-import { createEngine } from '@/lib/TechSphere/engine/createEngine'
 import { createInteraction } from '@/lib/TechSphere/interaction/createInteraction'
-import { createResizeSystem } from '@/lib/TechSphere/core/createResizeSystem'
-
+import { useTechSphereStore } from '@/store/techSphere.store'
 import type { SkillPin } from '@/types/skillPin'
-import type { Ref } from 'vue'
 
 type TechSphereContext = {
   scene: THREE.Scene

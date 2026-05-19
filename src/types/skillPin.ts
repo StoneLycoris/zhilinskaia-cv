@@ -1,4 +1,5 @@
 import * as THREE from 'three'
+
 import type { Skill } from '@/types/skill'
 
 export type SkillPin = THREE.Group & {

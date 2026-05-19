@@ -1,6 +1,7 @@
 import * as THREE from 'three'
-import type { SkillPin } from '@/types/skillPin'
+
 import { SPRING } from '@/lib/TechSphere/pinPhysics/config'
+import type { SkillPin } from '@/types/skillPin'
 
 export function updateHover(pin: SkillPin) {
   const data = pin.userData

@@ -1,9 +1,9 @@
 import * as THREE from 'three'
+
+import { createSpriteLabel } from '@/lib/TechSphere/entities/pin/createSpriteLabel'
+import { fibonacciSpherePoint } from '@/lib/TechSphere/entities/pin/latLon'
 import type { Skill } from '@/types/skill'
 import type { SkillPin } from '@/types/skillPin'
-
-import { fibonacciSpherePoint } from '@/lib/TechSphere/entities/pin/latLon'
-import { createSpriteLabel } from '@/lib/TechSphere/entities/pin/createSpriteLabel'
 
 export function createPins(globe: THREE.Mesh, skills: Skill[]) {
   const pins: SkillPin[] = []

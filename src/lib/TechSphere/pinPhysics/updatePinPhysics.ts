@@ -1,10 +1,10 @@
 import * as THREE from 'three'
-import type { SkillPin } from '@/types/skillPin'
 
 import { updateHover } from '@/lib/TechSphere/pinPhysics/updateHover'
-import { updateVisibility } from '@/lib/TechSphere/pinPhysics/updateVisibility'
 import { updateTransform } from '@/lib/TechSphere/pinPhysics/updateTransform'
+import { updateVisibility } from '@/lib/TechSphere/pinPhysics/updateVisibility'
 import { updateVisuals } from '@/lib/TechSphere/pinPhysics/visuals/updateVisuals'
+import type { SkillPin } from '@/types/skillPin'
 
 export function updatePinPhysics(
   pin: SkillPin,

@@ -1,8 +1,8 @@
 <template>
   <button
     class="theme-toggle"
-    @click="toggleTheme"
     :aria-label="ariaLabel"
+    @click="toggleTheme"
   >
     <span class="icon">
       <svg v-if="theme === 'dark'" viewBox="0 0 24 24">
@@ -26,6 +26,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+
 import { useTheme } from '@/composables/useTheme'
 
 const { theme, toggleTheme } = useTheme()

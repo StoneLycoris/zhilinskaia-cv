@@ -1,6 +1,7 @@
 import * as THREE from 'three'
-import type { SkillPin } from '@/types/skillPin'
+
 import { LABEL } from '@/lib/TechSphere/pinPhysics/config'
+import type { SkillPin } from '@/types/skillPin'
 
 export function updateLabel(
   pin: SkillPin,

@@ -19,7 +19,6 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import ExperienceItem from '@/components/Experience/ExperienceItem.vue'
-
 import type { ExperienceItem as ExperienceItemType } from '@/types/experience'
 
 const { tm } = useI18n()

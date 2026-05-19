@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 import type { Ref } from 'vue'
+
 import type { SkillPin } from '@/types/skillPin'
 
 export function useInteraction(
