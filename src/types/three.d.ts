@@ -1,9 +1,9 @@
-import * as THREE from 'three'
+import * as THREE from "three";
 
-import type { Skill } from '@/types/skill'
+import type { Skill } from "@/types/skill";
 
 export type SkillSprite = THREE.Sprite & {
   userData: {
-    skill: Skill
-  }
-}
+    skill: Skill;
+  };
+};

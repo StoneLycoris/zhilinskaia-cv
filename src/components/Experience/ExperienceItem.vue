@@ -23,13 +23,13 @@
 
     <div
       v-for="project in item.projects"
-      :key="project.name"
       class="experience-item__project"
+      :key="project.name"
     >
       <h4>{{ project.name }}</h4>
 
       <div class="experience-item__tags">
-        <p>{{ $t('experience.stack') }}:</p>
+        <p>{{ $t("experience.stack") }}:</p>
 
         <span
           v-for="tech in project.stack"
@@ -43,7 +43,7 @@
         v-if="project.libraries"
         class="experience-item__tags experience-item__tags--secondary"
       >
-        <p>{{ $t('experience.libraries') }}:</p>
+        <p>{{ $t("experience.libraries") }}:</p>
 
         <span
           v-for="lib in project.libraries"
@@ -57,7 +57,7 @@
         v-if="project.testing"
         class="experience-item__tags experience-item__tags--secondary"
       >
-        <p>{{ $t('experience.tests') }}:</p>
+        <p>{{ $t("experience.tests") }}:</p>
 
         <span
           v-for="test in project.testing"
@@ -80,161 +80,161 @@
 </template>
 
 <script setup lang="ts">
-import type { ExperienceItem } from '@/types/experience'
+  import type { ExperienceItem } from "@/types/experience";
 
-defineProps<{
-  item: ExperienceItem
-}>()
+  defineProps<{
+    item: ExperienceItem;
+  }>();
 
-function handleMouseMove(e: MouseEvent) {
-  const target = e.currentTarget as HTMLElement
-  const rect = target.getBoundingClientRect()
+  function handleMouseMove(e: MouseEvent) {
+    const target = e.currentTarget as HTMLElement;
+    const rect = target.getBoundingClientRect();
 
-  const x = e.clientX - rect.left
-  const y = e.clientY - rect.top
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
 
-  target.style.setProperty('--x', `${x}px`)
-  target.style.setProperty('--y', `${y}px`)
-}
+    target.style.setProperty("--x", `${x}px`);
+    target.style.setProperty("--y", `${y}px`);
+  }
 </script>
 
 <style scoped lang="scss">
-.experience-item {
-  padding: 28px;
+  .experience-item {
+    padding: 28px;
 
-  border-radius: 16px;
+    border-radius: 16px;
 
-  background: var(--surface-elevated);
+    background: var(--surface-elevated);
 
-  border: 1px solid var(--border);
+    border: 1px solid var(--border);
 
-  box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
 
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 
-  will-change: transform;
+    will-change: transform;
 
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
-
-  &::before {
-    content: '';
-
-    position: absolute;
-    inset: 0;
-
-    pointer-events: none;
-
-    opacity: 0;
-
-    transition: opacity 0.2s ease;
-
-    background: radial-gradient(
-      320px circle at var(--x, 50%) var(--y, 50%),
-      var(--accent-bg),
-      transparent 45%
-    );
-  }
-
-  &:hover {
-    transform: translateY(-6px);
-
-    border-color: var(--accent-border);
-
-    box-shadow:
-      0 18px 40px rgba(0, 0, 0, 0.08),
-      var(--shadow);
+    transition:
+      transform 0.25s ease,
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
 
     &::before {
-      opacity: 1;
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      pointer-events: none;
+
+      opacity: 0;
+
+      transition: opacity 0.2s ease;
+
+      background: radial-gradient(
+        320px circle at var(--x, 50%) var(--y, 50%),
+        var(--accent-bg),
+        transparent 45%
+      );
     }
-  }
 
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    &:hover {
+      transform: translateY(-6px);
 
-    margin-bottom: 12px;
-  }
+      border-color: var(--accent-border);
 
-  &__period {
-    font-size: 14px;
+      box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.08),
+        var(--shadow);
 
-    color: var(--text);
-
-    opacity: 0.7;
-  }
-
-  &__summary {
-    margin: 12px 0 16px;
-
-    color: var(--text);
-
-    line-height: 1.5;
-  }
-
-  &__project {
-    margin-top: 18px;
-
-    h4 {
-      margin-bottom: 8px;
-
-      color: var(--text);
-    }
-  }
-
-  &__tags {
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: 8px;
-
-    margin-bottom: 10px;
-
-    span {
-      padding: 5px 10px;
-
-      border-radius: 999px;
-
-      font-size: 12px;
-      font-weight: 500;
-
-      background: var(--accent-bg);
-
-      color: var(--accent);
-
-      border: 1px solid var(--accent-border);
-
-      transition: transform 0.2s ease;
-
-      &:hover {
-        transform: translateY(-1px);
+      &::before {
+        opacity: 1;
       }
     }
 
-    &--secondary {
-      opacity: 0.6;
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      margin-bottom: 12px;
     }
-  }
 
-  &__achievements {
-    padding-left: 18px;
+    &__period {
+      font-size: 14px;
 
-    li {
-      margin-bottom: 6px;
+      color: var(--text);
+
+      opacity: 0.7;
+    }
+
+    &__summary {
+      margin: 12px 0 16px;
+
+      color: var(--text);
 
       line-height: 1.5;
     }
-  }
 
-  &__muted {
-    opacity: 0.6;
+    &__project {
+      margin-top: 18px;
 
-    font-size: 14px;
+      h4 {
+        margin-bottom: 8px;
+
+        color: var(--text);
+      }
+    }
+
+    &__tags {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 8px;
+
+      margin-bottom: 10px;
+
+      span {
+        padding: 5px 10px;
+
+        border-radius: 999px;
+
+        font-size: 12px;
+        font-weight: 500;
+
+        background: var(--accent-bg);
+
+        color: var(--accent);
+
+        border: 1px solid var(--accent-border);
+
+        transition: transform 0.2s ease;
+
+        &:hover {
+          transform: translateY(-1px);
+        }
+      }
+
+      &--secondary {
+        opacity: 0.6;
+      }
+    }
+
+    &__achievements {
+      padding-left: 18px;
+
+      li {
+        margin-bottom: 6px;
+
+        line-height: 1.5;
+      }
+    }
+
+    &__muted {
+      opacity: 0.6;
+
+      font-size: 14px;
+    }
   }
-}
 </style>

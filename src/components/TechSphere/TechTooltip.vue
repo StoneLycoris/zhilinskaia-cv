@@ -3,8 +3,8 @@
     v-if="skill"
     class="tooltip"
     :style="{
-        top: tooltipPosition.y + 12 + 'px',
-        left: tooltipPosition.x + 12 + 'px'
+      top: tooltipPosition.y + 12 + 'px',
+      left: tooltipPosition.x + 12 + 'px',
     }"
   >
     <strong>{{ skill.name }}</strong>
@@ -13,21 +13,21 @@
 </template>
 
 <script setup lang="ts">
-import { storeToRefs } from 'pinia'
-import { useI18n } from 'vue-i18n'
+  import { storeToRefs } from "pinia";
+  import { useI18n } from "vue-i18n";
 
-import { useTechSphereStore } from '@/store/techSphere.store'
+  import { useTechSphereStore } from "@/store/techSphere.store";
 
-const { t } = useI18n()
+  const { t } = useI18n();
 
-const store = useTechSphereStore()
-const { hoveredSkill, tooltipPosition } = storeToRefs(store)
+  const store = useTechSphereStore();
+  const { hoveredSkill, tooltipPosition } = storeToRefs(store);
 
-const skill = hoveredSkill
+  const skill = hoveredSkill;
 </script>
 
 <style scoped lang="scss">
-.tooltip {
+  .tooltip {
     position: fixed;
     background: var(--bg);
     border: 1px solid var(--border);
@@ -40,13 +40,13 @@ const skill = hoveredSkill
     transform: translate(12px, 12px);
 
     h4 {
-        color: var(--text-h);
-        margin-bottom: 4px;
+      color: var(--text-h);
+      margin-bottom: 4px;
     }
 
     p {
-        font-size: 13px;
-        opacity: 0.8;
+      font-size: 13px;
+      opacity: 0.8;
     }
-}
+  }
 </style>

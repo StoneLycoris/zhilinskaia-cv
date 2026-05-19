@@ -1,30 +1,30 @@
-import { readonly,ref } from 'vue'
+import { readonly, ref } from "vue";
 
-export type Theme = 'light' | 'dark'
+export type Theme = "light" | "dark";
 
-const STORAGE_KEY = 'theme'
+const STORAGE_KEY = "theme";
 
-const theme = ref<Theme>('dark')
+const theme = ref<Theme>("dark");
 
 function applyTheme(t: Theme) {
-  const root = document.documentElement
-  root.setAttribute('data-theme', t)
-  theme.value = t
-  localStorage.setItem(STORAGE_KEY, t)
+  const root = document.documentElement;
+  root.setAttribute("data-theme", t);
+  theme.value = t;
+  localStorage.setItem(STORAGE_KEY, t);
 }
 
 function initTheme() {
-  const saved = localStorage.getItem(STORAGE_KEY) as Theme | null
+  const saved = localStorage.getItem(STORAGE_KEY) as Theme | null;
 
-  if (saved === 'light' || saved === 'dark') {
-    applyTheme(saved)
+  if (saved === "light" || saved === "dark") {
+    applyTheme(saved);
   } else {
-    applyTheme('dark')
+    applyTheme("dark");
   }
 }
 
 function toggleTheme() {
-  applyTheme(theme.value === 'dark' ? 'light' : 'dark')
+  applyTheme(theme.value === "dark" ? "light" : "dark");
 }
 
 export function useTheme() {
@@ -33,5 +33,5 @@ export function useTheme() {
     toggleTheme,
     setTheme: applyTheme,
     initTheme,
-  }
+  };
 }

@@ -1,33 +1,33 @@
-import * as THREE from 'three'
+import * as THREE from "three";
 
 export function createResizeSystem(params: {
-  canvas: HTMLCanvasElement
-  camera: THREE.PerspectiveCamera
-  renderer: THREE.WebGLRenderer
+  canvas: HTMLCanvasElement;
+  camera: THREE.PerspectiveCamera;
+  renderer: THREE.WebGLRenderer;
 }) {
-  const { canvas, camera, renderer } = params
+  const { canvas, camera, renderer } = params;
 
   function resize() {
-    const rect = canvas.getBoundingClientRect()
+    const rect = canvas.getBoundingClientRect();
 
-    camera.aspect = rect.width / rect.height
-    camera.updateProjectionMatrix()
+    camera.aspect = rect.width / rect.height;
+    camera.updateProjectionMatrix();
 
-    renderer.setSize(rect.width, rect.height, false)
+    renderer.setSize(rect.width, rect.height, false);
   }
 
   function start() {
-    window.addEventListener('resize', resize)
-    resize()
+    window.addEventListener("resize", resize);
+    resize();
   }
 
   function stop() {
-    window.removeEventListener('resize', resize)
+    window.removeEventListener("resize", resize);
   }
 
   return {
     start,
     stop,
     resize,
-  }
+  };
 }

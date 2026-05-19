@@ -1,23 +1,23 @@
-import { useI18n } from 'vue-i18n'
+import { useI18n } from "vue-i18n";
 
-const STORAGE_KEY = 'app-locale'
+const STORAGE_KEY = "app-locale";
 
 export function useLocale() {
-  const { locale } = useI18n()
+  const { locale } = useI18n();
 
-  function setLocale(lang: 'en' | 'ru') {
-    locale.value = lang
-    localStorage.setItem(STORAGE_KEY, lang)
+  function setLocale(lang: "en" | "ru") {
+    locale.value = lang;
+    localStorage.setItem(STORAGE_KEY, lang);
   }
 
   function toggleLocale() {
-    const next = locale.value === 'en' ? 'ru' : 'en'
-    setLocale(next)
+    const next = locale.value === "en" ? "ru" : "en";
+    setLocale(next);
   }
 
   return {
     locale,
     setLocale,
     toggleLocale,
-  }
+  };
 }

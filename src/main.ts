@@ -1,19 +1,19 @@
-import '@/assets/styles/main.scss'
+import "@/assets/styles/main.scss";
 
-import { createApp } from 'vue'
+import { createApp } from "vue";
 
-import App from '@/App.vue'
-import { useTheme } from '@/composables/useTheme'
-import { i18n } from '@/i18n'
-import { setupPinia } from '@/store/ui.store'
+import App from "@/App.vue";
+import { useTheme } from "@/composables/useTheme";
+import { i18n } from "@/i18n";
+import { setupPinia } from "@/store/ui.store";
 
-const app = createApp(App)
+const app = createApp(App);
 
-setupPinia(app)
+setupPinia(app);
 
-const { initTheme } = useTheme()
-initTheme()
+const { initTheme } = useTheme();
+initTheme();
 
-app.use(i18n)
+app.use(i18n);
 
-app.mount('#app')
+app.mount("#app");

@@ -1,16 +1,16 @@
 {
-    "plugins": ["prettier-plugin-organize-attributes"],
-    "semi": true,
-    "tabWidth": 2,
-    "bracketSpacing": true,
-    "singleQuote": false,
-    "arrowParens": "always",
-    "vueIndentScriptAndStyle": true,
-    "singleAttributePerLine": true,
-    "endOfLine": "lf",
-    "trailingComma": "es5",
-    "printWidth": 80,
-    "attributeGroups": [
+  "plugins": ["prettier-plugin-organize-attributes"],
+  "semi": true,
+  "tabWidth": 2,
+  "bracketSpacing": true,
+  "singleQuote": false,
+  "arrowParens": "always",
+  "vueIndentScriptAndStyle": true,
+  "singleAttributePerLine": true,
+  "endOfLine": "lf",
+  "trailingComma": "es5",
+  "printWidth": 80,
+  "attributeGroups": [
     "^data-test",
     "^v-if",
     "v-else",
@@ -20,5 +20,5 @@
     "$DEFAULT",
     "^:",
     "^@"
-    ]
+  ]
 }

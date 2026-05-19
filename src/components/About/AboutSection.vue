@@ -1,8 +1,7 @@
 <template>
   <section class="about">
-
-    <p>{{ $t('hero.description.general') }}</p>
-    <p>{{ $t('hero.description.experience') }}</p>
+    <p>{{ $t("hero.description.general") }}</p>
+    <p>{{ $t("hero.description.experience") }}</p>
   </section>
 </template>
 

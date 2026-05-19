@@ -1,8 +1,8 @@
 <template>
   <section class="hero">
-    <h1>{{ $t('hero.name') }}</h1>
-    <h2>{{ $t('hero.title') }}</h2>
-    <p>{{ $t('hero.subtitle') }}</p>
+    <h1>{{ $t("hero.name") }}</h1>
+    <h2>{{ $t("hero.title") }}</h2>
+    <p>{{ $t("hero.subtitle") }}</p>
   </section>
 </template>
 
@@ -15,17 +15,18 @@
     justify-content: center;
     text-align: center;
 
-    h1, h2 {
+    h1,
+    h2 {
       color: var(--text-h);
-      }
+    }
 
-      h2 {
-        font-size: 40px;
-      }
+    h2 {
+      font-size: 40px;
+    }
 
     p {
       color: var(--text);
       opacity: 0.8;
-      }
-}
+    }
+  }
 </style>

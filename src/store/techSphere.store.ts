@@ -1,8 +1,8 @@
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia";
 
-import type { Skill } from '@/types/skill'
+import type { Skill } from "@/types/skill";
 
-export const useTechSphereStore = defineStore('techSphere', {
+export const useTechSphereStore = defineStore("techSphere", {
   state: () => ({
     hoveredSkill: null as Skill | null,
     tooltipPosition: { x: 0, y: 0 },
@@ -10,11 +10,11 @@ export const useTechSphereStore = defineStore('techSphere', {
 
   actions: {
     setHoveredSkill(skill: Skill | null, x?: number, y?: number) {
-      this.hoveredSkill = skill
+      this.hoveredSkill = skill;
 
       if (skill && x !== undefined && y !== undefined) {
-        this.tooltipPosition = { x, y }
+        this.tooltipPosition = { x, y };
       }
     },
   },
-})
+});
