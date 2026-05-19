@@ -3,42 +3,39 @@ import tseslint from 'typescript-eslint'
 import pluginVue from 'eslint-plugin-vue'
 import vueParser from 'vue-eslint-parser'
 import eslintConfigPrettier from 'eslint-config-prettier'
-import eslintPluginPrettier from 'eslint-plugin-prettier'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 
 export default [
-    js.configs.recommended,
+  {
+    ignores: ['dist', 'node_modules', 'coverage', '.output', '.vite'],
+  },
 
-    ...tseslint.configs.recommendedTypeChecked,
+  js.configs.recommended,
 
-    ...pluginVue.configs['flat/recommended'],
+  ...tseslint.configs.recommended,
 
-{
+  ...pluginVue.configs['flat/recommended'],
+
+  {
     files: ['**/*.vue'],
 
     languageOptions: {
-    parser: vueParser,
-
-    parserOptions: {
+      parser: vueParser,
+      parserOptions: {
         parser: tseslint.parser,
         ecmaVersion: 'latest',
         sourceType: 'module',
-
-        project: './tsconfig.json',
-        tsconfigRootDir: import.meta.dirname,
-        },
+      },
     },
 
     plugins: {
-        'simple-import-sort': simpleImportSort,
-        prettier: eslintPluginPrettier,
+      'simple-import-sort': simpleImportSort,
     },
 
     rules: {
       'vue/multi-word-component-names': 'off',
       'vue/html-self-closing': 'off',
       'vue/max-attributes-per-line': 'off',
-      'vue/component-api-style': ['error', ['script-setup']],
 
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-unused-vars': [
@@ -48,8 +45,6 @@ export default [
 
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
-
-      'prettier/prettier': 'error',
     },
   },
 
@@ -58,19 +53,12 @@ export default [
 
     languageOptions: {
       parser: tseslint.parser,
-
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-
-        project: './tsconfig.json',
-        tsconfigRootDir: import.meta.dirname,
-      },
+      ecmaVersion: 'latest',
+      sourceType: 'module',
     },
 
     plugins: {
       'simple-import-sort': simpleImportSort,
-      prettier: eslintPluginPrettier,
     },
 
     rules: {
@@ -82,10 +70,8 @@ export default [
 
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
-
-      'prettier/prettier': 'error',
     },
   },
 
-    eslintConfigPrettier,
+  eslintConfigPrettier,
 ]
