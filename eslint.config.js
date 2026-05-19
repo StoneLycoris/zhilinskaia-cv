@@ -43,6 +43,8 @@ export default [
         { argsIgnorePattern: '^_' },
       ],
 
+      'no-undef': 'off',
+
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
     },
