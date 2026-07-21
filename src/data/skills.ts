@@ -175,4 +175,34 @@ export const skills: Skill[] = [
     color: "#8b5cf6",
     icon: `${import.meta.env.BASE_URL}icons/histoire.svg`,
   },
+  {
+    id: "tanstackQuery",
+    name: "TanStack Query",
+    color: "#ff4154",
+    icon: `${import.meta.env.BASE_URL}icons/tanstack.svg`,
+  },
+  {
+    id: "playwright",
+    name: "Playwright",
+    color: "#45ba63",
+    icon: `${import.meta.env.BASE_URL}icons/playwright.svg`,
+  },
+  {
+    id: "vueUse",
+    name: "VueUse",
+    color: "#41b883",
+    icon: `${import.meta.env.BASE_URL}icons/vueuse.svg`,
+  },
+  {
+    id: "eslint",
+    name: "ESLint",
+    color: "#4b32c3",
+    icon: `${import.meta.env.BASE_URL}icons/eslint.svg`,
+  },
+  {
+    id: "prettier",
+    name: "Prettier",
+    color: "#f7b93e",
+    icon: `${import.meta.env.BASE_URL}icons/prettier.svg`,
+  },
 ];

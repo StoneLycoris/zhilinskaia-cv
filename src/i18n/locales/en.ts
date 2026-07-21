@@ -145,6 +145,11 @@ Actively involved in architectural decisions and code reviews.`,
     postman: "API testing, request collections, debugging",
     swagger: "OpenAPI docs, API contracts, integrations",
     histoire: "UI component docs, isolated development",
+    tanstackQuery: "Server state, caching, data synchronization",
+    playwright: "E2E testing, UI automation",
+    vueUse: "Composable utilities, Composition API",
+    eslint: "Code quality, static analysis",
+    prettier: "Code formatting, consistent style",
   },
 
   contacts: {

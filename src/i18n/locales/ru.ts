@@ -145,6 +145,11 @@ export default {
     postman: "Тестирование API, коллекции запросов",
     swagger: "OpenAPI документация, API-контракты",
     histoire: "Документация UI, sandbox разработка",
+    tanstackQuery: "Server state, кэширование, синхронизация данных",
+    playwright: "E2E тесты, UI автоматизация",
+    vueUse: "Composable утилиты, Composition API",
+    eslint: "Качество кода, статический анализ",
+    prettier: "Форматирование кода, единый стиль",
   },
 
   contacts: {
