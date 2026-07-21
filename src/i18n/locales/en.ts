@@ -96,7 +96,7 @@ Actively involved in architectural decisions and code reviews.`,
         company: "Demis Group",
         role: "Frontend Developer",
         location: "Tambov, Russia",
-        period: "Dec 2021 — Jun 2022",
+        period: "Jun 2021 — Dec 2021",
 
         summary:
           "Developed responsive interfaces and optimized web projects, improving performance and accessibility.",

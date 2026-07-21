@@ -96,7 +96,7 @@ export default {
         company: "Demis Group",
         role: "Frontend Developer",
         location: "Тамбов, Россия",
-        period: "Декабрь 2021 — Июнь 2022",
+        period: "Июнь 2021 — Декабрь 2021",
 
         summary:
           "Разработала адаптивные интерфейсы и оптимизировала web-проекты, улучшив производительность и доступность.",
