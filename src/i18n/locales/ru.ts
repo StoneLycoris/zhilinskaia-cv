@@ -120,6 +120,18 @@ export default {
 
   tech: {
     title: "Навыки",
+    subtitle: "Список навыков",
+    expandAll: "Раскрыть все",
+    collapseAll: "Свернуть все",
+    categories: {
+      frontend: "Frontend",
+      styling: "UI и стили",
+      testing: "Тестирование",
+      api: "API",
+      tooling: "Инструменты",
+      quality: "Качество кода",
+      devops: "DevOps",
+    },
     vue: "Composition API, реактивность, производительность UI",
     ts: "Строгая типизация, дженерики, безопасность кода",
     pinia: "Менеджмент состояний, модульные хранилища",

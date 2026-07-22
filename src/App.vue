@@ -6,6 +6,7 @@
     <AboutSection />
     <ExperienceSection />
     <TechSphere />
+    <SkillsAccordion />
     <ContactsSection />
   </div>
 </template>
@@ -16,6 +17,7 @@
   import ExperienceSection from "@/components/Experience/ExperienceSection.vue";
   import HeroSection from "@/components/Hero/HeroSection.vue";
   import LanguageToggler from "@/components/Language/LanguageToggler.vue";
+  import SkillsAccordion from "@/components/Skills/SkillsAccordion.vue";
   import TechSphere from "@/components/TechSphere/TechSphere.vue";
   import ThemeToggler from "@/components/Theme/ThemeToggler.vue";
 </script>

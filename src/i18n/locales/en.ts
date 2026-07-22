@@ -120,6 +120,18 @@ Actively involved in architectural decisions and code reviews.`,
 
   tech: {
     title: "Skills",
+    subtitle: "Skill list",
+    expandAll: "Expand all",
+    collapseAll: "Collapse all",
+    categories: {
+      frontend: "Frontend",
+      styling: "Styling",
+      testing: "Testing",
+      api: "API",
+      tooling: "Tooling",
+      codeQuality: "Code Quality",
+      devOps: "DevOps",
+    },
     vue: "Composition API, reactivity, UI performance",
     ts: "Strong typing, generics, safer code",
     pinia: "State management, modular stores",
