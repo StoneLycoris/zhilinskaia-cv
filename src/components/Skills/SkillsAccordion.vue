@@ -33,8 +33,8 @@
 
     <div
       v-for="category in categories"
-      :key="category"
       class="skills__group"
+      :key="category"
     >
       <button
         class="skills__header"
