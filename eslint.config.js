@@ -9,16 +9,11 @@ export default [
   {
     ignores: ["dist", "node_modules", "coverage", ".output", ".vite"],
   },
-
   js.configs.recommended,
-
   ...tseslint.configs.recommended,
-
   ...pluginVue.configs["flat/recommended"],
-
   {
     files: ["**/*.vue"],
-
     languageOptions: {
       parser: vueParser,
       parserOptions: {
@@ -27,53 +22,79 @@ export default [
         sourceType: "module",
       },
     },
-
     plugins: {
       "simple-import-sort": simpleImportSort,
     },
-
     rules: {
       "vue/multi-word-component-names": "off",
-      "vue/html-self-closing": "off",
+      "vue/html-self-closing": [
+        "error",
+        {
+          html: {
+            void: "always",
+            normal: "always",
+            component: "always",
+          },
+          svg: "always",
+          math: "always",
+        },
+      ],
       "vue/max-attributes-per-line": "off",
-
+      "vue/attributes-order": [
+        "error",
+        {
+          order: [
+            "DEFINITION",
+            "LIST_RENDERING",
+            "CONDITIONALS",
+            "RENDER_MODIFIERS",
+            "GLOBAL",
+            "UNIQUE",
+            "SLOT",
+            "TWO_WAY_BINDING",
+            "OTHER_DIRECTIVES",
+            "OTHER_ATTR",
+            "CONTENT",
+            "EVENTS",
+          ],
+        },
+      ],
       "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/no-unused-vars": [
         "warn",
-        { argsIgnorePattern: "^_" },
+        {
+          argsIgnorePattern: "^_",
+        },
       ],
-
-      "no-undef": "off",
-
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
+      "no-undef": "off",
     },
   },
 
   {
     files: ["**/*.ts"],
-
     languageOptions: {
       parser: tseslint.parser,
-      ecmaVersion: "latest",
-      sourceType: "module",
+      parserOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module",
+      },
     },
-
     plugins: {
       "simple-import-sort": simpleImportSort,
     },
-
     rules: {
       "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/no-unused-vars": [
         "warn",
-        { argsIgnorePattern: "^_" },
+        {
+          argsIgnorePattern: "^_",
+        },
       ],
-
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
     },
   },
-
   eslintConfigPrettier,
 ];

@@ -28,8 +28,8 @@
       >
         <button
           v-for="link in links"
-          type="button"
           :key="link.id"
+          type="button"
           :class="{
             active: activeSection === link.id,
           }"

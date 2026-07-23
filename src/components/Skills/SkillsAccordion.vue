@@ -36,8 +36,8 @@
 
     <div
       v-for="category in categories"
-      class="skills__group"
       :key="category"
+      class="skills__group"
     >
       <button
         class="skills__header"

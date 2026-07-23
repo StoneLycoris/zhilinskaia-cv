@@ -23,8 +23,8 @@
 
     <div
       v-for="project in item.projects"
-      class="experience-item__project"
       :key="project.name"
+      class="experience-item__project"
     >
       <h4>{{ project.name }}</h4>
 
