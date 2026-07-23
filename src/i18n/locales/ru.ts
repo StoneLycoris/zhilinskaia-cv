@@ -171,4 +171,12 @@ export default {
     copy: "Скопировать",
     copied: "Скопировано!",
   },
+
+  navigation: {
+    about: "Обо мне",
+    experience: "Опыт",
+    tech: "Навыки",
+    skills: "Список навыков",
+    contacts: "Контакты",
+  },
 };

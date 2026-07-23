@@ -1,5 +1,8 @@
 <template>
-  <section class="contacts">
+  <section
+    id="contacts"
+    class="contacts"
+  >
     <div class="contacts__container">
       <div class="contacts__header">
         <h2 class="contacts__title">

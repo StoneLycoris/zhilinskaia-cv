@@ -1,5 +1,8 @@
 <template>
-  <section class="skills">
+  <section
+    id="skills"
+    class="skills"
+  >
     <div class="skills__top">
       <h3 class="skills__title">
         {{ $t("tech.subtitle") }}

@@ -38,3 +38,7 @@ h2 {
 section {
   padding: 100px 24px;
 }
+
+section[id] {
+  scroll-margin-top: 110px;
+}

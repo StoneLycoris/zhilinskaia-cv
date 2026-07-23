@@ -16,7 +16,7 @@
   import { storeToRefs } from "pinia";
   import { useI18n } from "vue-i18n";
 
-  import { useTechSphereStore } from "@/store/techSphere.store";
+  import { useTechSphereStore } from "@/stores/techSphere.store";
 
   const { t } = useI18n();
 

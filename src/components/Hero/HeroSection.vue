@@ -1,5 +1,8 @@
 <template>
-  <section class="hero">
+  <section
+    id="about"
+    class="hero"
+  >
     <h1>{{ $t("hero.name") }}</h1>
     <h2>{{ $t("hero.title") }}</h2>
     <p>{{ $t("hero.subtitle") }}</p>
@@ -8,7 +11,7 @@
 
 <style scoped lang="scss">
   .hero {
-    margin-top: 40px;
+    margin-top: 110px;
     display: flex;
     flex-direction: column;
     gap: 16px;

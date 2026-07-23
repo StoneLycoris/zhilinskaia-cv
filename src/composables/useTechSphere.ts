@@ -21,7 +21,7 @@ import {
 } from "@/lib/TechSphere/entities/globe/createGlobe";
 import { createPins } from "@/lib/TechSphere/entities/pin/createPins";
 import { createInteraction } from "@/lib/TechSphere/interaction/createInteraction";
-import { useTechSphereStore } from "@/store/techSphere.store";
+import { useTechSphereStore } from "@/stores/techSphere.store";
 import type { SkillPin } from "@/types/skillPin";
 
 type TechSphereContext = {

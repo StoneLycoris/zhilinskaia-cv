@@ -2,6 +2,7 @@
   <div class="app">
     <LanguageToggler />
     <ThemeToggler />
+    <Navigation />
     <HeroSection />
     <AboutSection />
     <ExperienceSection />
@@ -17,6 +18,7 @@
   import ExperienceSection from "@/components/Experience/ExperienceSection.vue";
   import HeroSection from "@/components/Hero/HeroSection.vue";
   import LanguageToggler from "@/components/Language/LanguageToggler.vue";
+  import Navigation from "@/components/Navigation/Navigation.vue";
   import SkillsAccordion from "@/components/Skills/SkillsAccordion.vue";
   import TechSphere from "@/components/TechSphere/TechSphere.vue";
   import ThemeToggler from "@/components/Theme/ThemeToggler.vue";

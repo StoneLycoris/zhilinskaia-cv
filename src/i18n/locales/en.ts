@@ -171,4 +171,12 @@ Actively involved in architectural decisions and code reviews.`,
     copy: "Copy",
     copied: "Copied!",
   },
+
+  navigation: {
+    about: "About",
+    experience: "Experience",
+    tech: "Skills",
+    skills: "Skill list",
+    contacts: "Contact",
+  },
 };

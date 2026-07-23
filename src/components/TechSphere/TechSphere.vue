@@ -1,5 +1,8 @@
 <template>
-  <section class="tech">
+  <section
+    id="tech"
+    class="tech"
+  >
     <h2 class="tech__title">{{ $t("tech.title") }}</h2>
     <canvas
       ref="canvasRef"
