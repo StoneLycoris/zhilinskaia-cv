@@ -34,7 +34,6 @@
     padding: 0px 24px 120px;
 
     &__container {
-      max-width: 900px;
       margin: 0 auto;
 
       display: flex;
