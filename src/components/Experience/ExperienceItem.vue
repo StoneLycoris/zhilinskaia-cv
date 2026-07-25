@@ -1,7 +1,7 @@
 <template>
   <article
     class="experience-item"
-    @mousemove="handleMouseMove"
+    @mousemove="updateGlowPosition"
   >
     <div class="experience-item__header">
       <div>
@@ -80,22 +80,14 @@
 </template>
 
 <script setup lang="ts">
+  import { useGlowHover } from "@/composables/useGlowHover";
   import type { ExperienceItem } from "@/types/experience";
 
   defineProps<{
     item: ExperienceItem;
   }>();
 
-  function handleMouseMove(e: MouseEvent) {
-    const target = e.currentTarget as HTMLElement;
-    const rect = target.getBoundingClientRect();
-
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    target.style.setProperty("--x", `${x}px`);
-    target.style.setProperty("--y", `${y}px`);
-  }
+  const { updateGlowPosition } = useGlowHover();
 </script>
 
 <style scoped lang="scss">

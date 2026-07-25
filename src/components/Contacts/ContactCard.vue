@@ -4,7 +4,7 @@
     rel="noopener noreferrer"
     class="contact-card"
     :href="contact.href"
-    @mousemove="handleMouseMove"
+    @mousemove="updateGlowPosition"
   >
     <div class="contact-card__inner">
       <div class="contact-card__top">
@@ -41,27 +41,19 @@
 
 <script setup lang="ts">
   import { useCopyToClipboard } from "@/composables/useCopyToClipboard";
+  import { useGlowHover } from "@/composables/useGlowHover";
   import type { Contact } from "@/types/contact";
 
   const props = defineProps<{
     contact: Contact;
   }>();
 
+  const { updateGlowPosition } = useGlowHover();
+
   const { copied, copy } = useCopyToClipboard();
 
   function handleCopy() {
     copy(props.contact.value);
-  }
-
-  function handleMouseMove(e: MouseEvent) {
-    const target = e.currentTarget as HTMLElement;
-    const rect = target.getBoundingClientRect();
-
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    target.style.setProperty("--x", `${x}px`);
-    target.style.setProperty("--y", `${y}px`);
   }
 </script>
 

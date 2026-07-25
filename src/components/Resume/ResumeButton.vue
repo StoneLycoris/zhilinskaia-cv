@@ -3,7 +3,7 @@
     :href="currentResume.file"
     :download="currentResume.download"
     class="resume-button"
-    @mousemove="handleMouseMove"
+    @mousemove="updateGlowPosition"
   >
     <div class="resume-button__icon">
       <svg
@@ -65,25 +65,17 @@
   import { computed } from "vue";
   import { useI18n } from "vue-i18n";
 
+  import { useGlowHover } from "@/composables/useGlowHover";
   import { resumes } from "@/data/resume";
   import type { ResumeLocale } from "@/types/resume";
 
   const { locale } = useI18n();
 
+  const { updateGlowPosition } = useGlowHover();
+
   const currentResume = computed(() => {
     return resumes[locale.value as ResumeLocale] ?? resumes.en;
   });
-
-  function handleMouseMove(e: MouseEvent) {
-    const target = e.currentTarget as HTMLElement;
-    const rect = target.getBoundingClientRect();
-
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    target.style.setProperty("--x", `${x}px`);
-    target.style.setProperty("--y", `${y}px`);
-  }
 </script>
 
 <style scoped lang="scss">
