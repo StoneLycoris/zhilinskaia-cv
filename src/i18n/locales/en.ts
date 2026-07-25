@@ -179,4 +179,9 @@ Actively involved in architectural decisions and code reviews.`,
     skills: "Skill list",
     contacts: "Contact",
   },
+
+  resume: {
+    title: "Download Resume",
+    subtitle: "Frontend Developer Vue/TS • PDF",
+  },
 };

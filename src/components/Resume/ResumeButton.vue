@@ -1,0 +1,217 @@
+<template>
+  <a
+    :href="currentResume.file"
+    :download="currentResume.download"
+    class="resume-button"
+    @mousemove="handleMouseMove"
+  >
+    <div class="resume-button__icon">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+      >
+        <path
+          d="M12 3V15"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+
+        <path
+          d="M7 10L12 15L17 10"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+
+        <path
+          d="M5 20H19"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+    </div>
+
+    <div class="resume-button__content">
+      <span class="resume-button__title">
+        {{ $t("resume.title") }}
+      </span>
+
+      <span class="resume-button__subtitle">
+        {{ $t("resume.subtitle") }}
+      </span>
+    </div>
+
+    <div class="resume-button__arrow">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+      >
+        <path
+          d="M9 6L15 12L9 18"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+  </a>
+</template>
+
+<script setup lang="ts">
+  import { computed } from "vue";
+  import { useI18n } from "vue-i18n";
+
+  import { resumes } from "@/data/resume";
+  import type { ResumeLocale } from "@/types/resume";
+
+  const { locale } = useI18n();
+
+  const currentResume = computed(() => {
+    return resumes[locale.value as ResumeLocale] ?? resumes.en;
+  });
+
+  function handleMouseMove(e: MouseEvent) {
+    const target = e.currentTarget as HTMLElement;
+    const rect = target.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    target.style.setProperty("--x", `${x}px`);
+    target.style.setProperty("--y", `${y}px`);
+  }
+</script>
+
+<style scoped lang="scss">
+  .resume-button {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: fit-content;
+    padding: 18px 22px;
+    margin: 0 auto;
+    text-decoration: none;
+    border-radius: 18px;
+    background: var(--surface-elevated);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transition:
+      transform 0.25s ease,
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        340px circle at var(--x, 50%) var(--y, 50%),
+        var(--accent-bg),
+        transparent 45%
+      );
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      pointer-events: none;
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-border);
+      box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.08),
+        var(--shadow);
+
+      &::before {
+        opacity: 1;
+      }
+
+      .resume-button__icon {
+        transform: translateY(-2px);
+      }
+
+      .resume-button__arrow {
+        transform: translateX(4px);
+        color: var(--accent);
+      }
+    }
+
+    &__icon {
+      flex-shrink: 0;
+      width: 56px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: var(--accent-bg);
+      color: var(--accent);
+      transition: transform 0.25s ease;
+
+      svg {
+        width: 26px;
+        height: 26px;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      z-index: 1;
+    }
+
+    &__title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-h);
+    }
+
+    &__subtitle {
+      font-size: 14px;
+      color: var(--text);
+      opacity: 0.75;
+    }
+
+    &__arrow {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      color: var(--text);
+      transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .resume-button {
+      &__title {
+        font-size: 16px;
+      }
+
+      &__subtitle {
+        font-size: 13px;
+      }
+
+      &__icon {
+        width: 48px;
+        height: 48px;
+
+        svg {
+          width: 22px;
+          height: 22px;
+        }
+      }
+    }
+  }
+</style>

@@ -179,4 +179,9 @@ export default {
     skills: "Список навыков",
     contacts: "Контакты",
   },
+
+  resume: {
+    title: "Скачать резюме",
+    subtitle: "Frontend Разработчик Vue/TS • PDF",
+  },
 };

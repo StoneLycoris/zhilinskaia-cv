@@ -5,6 +5,7 @@
     <Navigation />
     <HeroSection />
     <AboutSection />
+    <ResumeButton />
     <ExperienceSection />
     <TechSphere />
     <SkillsAccordion />
@@ -19,6 +20,7 @@
   import HeroSection from "@/components/Hero/HeroSection.vue";
   import LanguageToggler from "@/components/Language/LanguageToggler.vue";
   import Navigation from "@/components/Navigation/Navigation.vue";
+  import ResumeButton from "@/components/Resume/ResumeButton.vue";
   import SkillsAccordion from "@/components/Skills/SkillsAccordion.vue";
   import TechSphere from "@/components/TechSphere/TechSphere.vue";
   import ThemeToggler from "@/components/Theme/ThemeToggler.vue";
