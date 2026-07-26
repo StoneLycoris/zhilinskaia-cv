@@ -36,4 +36,24 @@
       z-index: 0;
     }
   }
+
+  @media (max-width: 1024px) {
+    .tech {
+      height: clamp(500px, 65vh, 620px);
+
+      &__canvas {
+        height: clamp(500px, 65vh, 620px);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .tech {
+      height: clamp(420px, 58vh, 500px);
+
+      &__canvas {
+        height: clamp(420px, 58vh, 500px);
+      }
+    }
+  }
 </style>
