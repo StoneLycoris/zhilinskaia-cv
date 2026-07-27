@@ -43,21 +43,6 @@
         {{ $t("resume.subtitle") }}
       </span>
     </div>
-
-    <div class="resume-button__arrow">
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-      >
-        <path
-          d="M9 6L15 12L9 18"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </div>
   </a>
 </template>
 
@@ -126,11 +111,6 @@
       .resume-button__icon {
         transform: translateY(-2px);
       }
-
-      .resume-button__arrow {
-        transform: translateX(4px);
-        color: var(--accent);
-      }
     }
 
     &__icon {
@@ -167,21 +147,6 @@
       font-size: 14px;
       color: var(--text);
       opacity: 0.75;
-    }
-
-    &__arrow {
-      margin-left: auto;
-      display: flex;
-      align-items: center;
-      color: var(--text);
-      transition:
-        transform 0.25s ease,
-        color 0.25s ease;
-
-      svg {
-        width: 22px;
-        height: 22px;
-      }
     }
   }
 
